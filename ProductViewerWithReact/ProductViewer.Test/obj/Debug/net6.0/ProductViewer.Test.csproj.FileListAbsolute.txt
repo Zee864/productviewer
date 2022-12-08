@@ -8,7 +8,6 @@ C:\Dev\productviewer\ProductViewerWithReact\ProductViewer.Test\bin\Debug\net6.0\
 C:\Dev\productviewer\ProductViewerWithReact\ProductViewer.Test\bin\Debug\net6.0\ProductViewer.Core.deps.json
 C:\Dev\productviewer\ProductViewerWithReact\ProductViewer.Test\bin\Debug\net6.0\ProductViewer.Core.runtimeconfig.json
 C:\Dev\productviewer\ProductViewerWithReact\ProductViewer.Test\bin\Debug\net6.0\spa.proxy.json
-C:\Dev\productviewer\ProductViewerWithReact\ProductViewer.Test\bin\Debug\net6.0\log4net.config
 C:\Dev\productviewer\ProductViewerWithReact\ProductViewer.Test\bin\Debug\net6.0\appsettings.Development.json
 C:\Dev\productviewer\ProductViewerWithReact\ProductViewer.Test\bin\Debug\net6.0\appsettings.json
 C:\Dev\productviewer\ProductViewerWithReact\ProductViewer.Test\bin\Debug\net6.0\ProductViewer.Core.exe
