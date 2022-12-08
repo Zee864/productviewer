@@ -8,6 +8,7 @@ public interface IProductsApi
     public HttpClient HttpClient { get; set; }
     public string BaseUri { get; set; }
     public string ProductUri { get; set; }
+    public ILogger<ProductsApi> Logger { get; set; }
     public Product? RetrieveProductAsync(int id);
     public List<Product>? RetrieveAllProductsAsync();
     public List<Product>? RetrieveProductsByFilter(ProductFilter productFilter);

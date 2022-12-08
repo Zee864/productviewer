@@ -2,19 +2,19 @@
 
 namespace ProductViewerWithReact.Models;
 
-public abstract class ProductFilter
+public class ProductFilter
 {
     /// <summary>
     /// Gets or sets the amount of pages that must be returned.
     /// </summary>
     [JsonPropertyName("page")]
-    public static int Page => 0;
+    public int Page { get; set; }
 
     /// <summary>
     /// Gets or sets the amount of products that must be returned per page.
     /// </summary>
     [JsonPropertyName("pageSize")]
-    public static int PageSize => 0;
+    public int PageSize { get; set; }
 
     /// <summary>
     /// Gets or sets the term for which the products must be ordered by.
@@ -25,7 +25,7 @@ public abstract class ProductFilter
     /// <value> <c>Price</c> <see cref="Product"/> </value>
     /// </summary>
     [JsonPropertyName("orderBy")] 
-    public static string OrderBy => "Id";
+    public string OrderBy { get; set; } = "Id";
 
     /// <summary>
     /// Gets or sets the direction for which the products must be ordered by.
@@ -34,7 +34,7 @@ public abstract class ProductFilter
     /// Default value is <c>true</c> which means ascending.
     /// </remarks>
     [JsonPropertyName("ascending")] 
-    public static bool Ascending => true;
+    public bool Ascending { get; set; } = true;
 
     /// <summary>
     /// Gets or sets the term for which the products must be filtered by.
@@ -44,5 +44,5 @@ public abstract class ProductFilter
     /// <value> <c>Price</c> <see cref="Product"/> </value>
     /// </summary>
     [JsonPropertyName("filter")]
-    public static string? Filter => null;
+    public string? Filter { get; set; }
 }

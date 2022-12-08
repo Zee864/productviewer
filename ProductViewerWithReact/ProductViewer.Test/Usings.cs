@@ -5,3 +5,4 @@ global using System.Net;
 global using Newtonsoft.Json;
 global using ProductViewerWithReact.Models;
 global using ProductViewerWithReact.Services;
+global using Microsoft.Extensions.Logging;

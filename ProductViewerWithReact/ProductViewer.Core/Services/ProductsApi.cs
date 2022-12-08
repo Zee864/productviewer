@@ -1,7 +1,6 @@
 ﻿using System.Text;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
-using ProductViewerWithReact.Controllers;
 using ProductViewerWithReact.Models;
 
 namespace ProductViewerWithReact.Services;
@@ -17,22 +16,25 @@ public class ProductsApi : IProductsApi
     public HttpClient HttpClient { get; set; }
     public string BaseUri { get; set; }
     public string ProductUri { get; set; }
-    
+    public ILogger<ProductsApi> Logger { get; set; }
+
     #endregion
     
     #region Constructor
-    
+
     /// <summary>
     /// Constructor for the ProductsApi class
     /// </summary>
     /// <param name="configuration">Dependency injection via constructor for the configuration class</param>
     /// <param name="httpClient">Dependency injection via constructor for the HttpClient class</param>
-    public ProductsApi(IConfiguration configuration, HttpClient httpClient)
+    /// <param name="logger">Dependency injection via constructor for the logger for the ProductsApi class</param>
+    public ProductsApi(IConfiguration configuration, HttpClient httpClient, ILogger<ProductsApi> logger)
     {
         Configuration = configuration;
         HttpClient = httpClient;
         BaseUri = Configuration.GetSection("Gendac:baseURI").Value;
         ProductUri = Configuration.GetSection("Gendac:productsURI").Value;
+        Logger = logger;
     }
 
     #endregion
@@ -59,13 +61,12 @@ public class ProductsApi : IProductsApi
             var content = response.Result.Content.ReadAsStringAsync().Result;
             // content is a string containing a single json object
             // deserialize the json object into a ProductModel object
-            var product = JsonConvert.DeserializeObject<Product>(content);
-            return product;
+            return JsonConvert.DeserializeObject<Product>(content);
         }
         catch (Exception e)
         {
-            // log the exception using log4net and return null
-            log4net.LogManager.GetLogger(typeof(ProductController)).Error(e);
+            // log the exception and return null
+            Logger.Log(LogLevel.Error, e.Message);
             return null;
         }
     }
@@ -92,8 +93,8 @@ public class ProductsApi : IProductsApi
         }
         catch (Exception e)
         {
-            // log the exception using log4net and return null
-            log4net.LogManager.GetLogger(typeof(ProductController)).Error(e);
+            // log the exception and return null
+            Logger.Log(LogLevel.Error, e.Message);
             return null;
         }
     }
@@ -109,20 +110,19 @@ public class ProductsApi : IProductsApi
         try
         {
             // make the call to the API to retrieve all the products
-            var response = HttpClient.GetAsync($"{BaseUri}{ProductUri}?page={ProductFilter.Page}&pageSize={ProductFilter.PageSize}&orderBy={ProductFilter.OrderBy}&ascending={ProductFilter.Ascending}&filter={ProductFilter.Filter}");
+            var response = HttpClient.GetAsync($"{BaseUri}{ProductUri}?page={productFilter.Page}&pageSize={productFilter.PageSize}&orderBy={productFilter.OrderBy}&ascending={productFilter.Ascending}&filter={productFilter.Filter}");
             // check if response is successful
             if (!response.Result.IsSuccessStatusCode) return null;
             // get the response content
             var content = response.Result.Content.ReadAsStringAsync().Result;
             // content is a string containing an array of json objects
             // deserialize the json objects into ProductModel objects
-            var products = JsonConvert.DeserializeObject<List<Product>>(content);
-            return products;
+            return JsonConvert.DeserializeObject<List<Product>>(content);
         }
         catch (Exception e)
         {
-            // log the exception using log4net and return null
-            log4net.LogManager.GetLogger(typeof(ProductController)).Error(e);
+            // log the exception and return null
+            Logger.Log(LogLevel.Error, e.Message);
             return null;
         }
     }
@@ -152,8 +152,8 @@ public class ProductsApi : IProductsApi
         }
         catch (Exception e)
         {
-            // log the exception using log4net and return false
-            log4net.LogManager.GetLogger(typeof(ProductController)).Error(e);
+            // log the exception and return false
+            Logger.Log(LogLevel.Error, e.Message);
             return false;
         }
     }
@@ -184,8 +184,8 @@ public class ProductsApi : IProductsApi
         }
         catch (Exception e)
         {
-            // log the exception using log4net and return false
-            log4net.LogManager.GetLogger(typeof(ProductController)).Error(e);
+            // log the exception and return false
+            Logger.Log(LogLevel.Error, e.Message);
             return false;
         }
     }
@@ -211,8 +211,8 @@ public class ProductsApi : IProductsApi
         }
         catch (Exception e)
         {
-            // log the exception using log4net and return false
-            log4net.LogManager.GetLogger(typeof(ProductController)).Error(e);
+            // log the exception and return false
+            Logger.Log(LogLevel.Error, e.Message);
             return false;
         }
     }
