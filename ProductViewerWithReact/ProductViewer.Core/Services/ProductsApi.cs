@@ -1,9 +1,9 @@
 ﻿using System.Text;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
-using ProductViewerWithReact.Models;
+using ProductViewer.Models;
 
-namespace ProductViewerWithReact.Services;
+namespace ProductViewer.Services;
 
 /// <summary>
 /// Class for working with the products api service 

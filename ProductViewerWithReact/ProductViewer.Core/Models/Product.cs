@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.Text.Json.Serialization;
 
-namespace ProductViewerWithReact.Models;
+namespace ProductViewer.Models;
 
 /// <summary>
 /// Represents a product.

@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using ProductViewerWithReact.Models;
-using ProductViewerWithReact.Services;
+using ProductViewer.Models;
+using ProductViewer.Services;
 
-namespace ProductViewerWithReact.Controllers;
+namespace ProductViewer.Controllers;
 
 /// <summary>
 /// Controller for the Product API endpoint

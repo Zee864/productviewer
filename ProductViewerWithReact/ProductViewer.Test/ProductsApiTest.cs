@@ -1,5 +1,3 @@
-using IConfiguration = Microsoft.Extensions.Configuration.IConfiguration;
-
 namespace ProductViewer.Test;
 
 /// <summary>

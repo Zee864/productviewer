@@ -1,5 +1,5 @@
 using System.Reflection;
-using ProductViewerWithReact.Services;
+using ProductViewer.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 

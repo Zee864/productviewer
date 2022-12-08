@@ -1,6 +1,6 @@
-﻿using ProductViewerWithReact.Models;
+﻿using ProductViewer.Models;
 
-namespace ProductViewerWithReact.Services;
+namespace ProductViewer.Services;
 
 public interface IProductsApi
 {
