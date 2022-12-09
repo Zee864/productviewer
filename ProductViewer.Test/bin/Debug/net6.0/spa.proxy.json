@@ -1,0 +1,8 @@
+{
+"SpaProxyServer": {
+"ServerUrl": "https://localhost:44490",
+"LaunchCommand": "npm start",
+"WorkingDirectory": "C:\\Dev\\productviewer\\ProductViewerWithReact\\ProductViewer.Core\\ClientApp\\",
+"MaxTimeoutInSeconds": "120"
+}
+}
