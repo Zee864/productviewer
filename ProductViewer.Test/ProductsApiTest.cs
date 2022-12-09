@@ -402,7 +402,7 @@ public class ProductsApiTest
         // Create a mock filter to return
         var mockFilter = new ProductFilter()
         {
-            Page = 3,
+            NumberOfPages = 3,
             PageSize = 10,
             OrderBy = "Category",
             Ascending = false,
@@ -540,7 +540,7 @@ public class ProductsApiTest
         // Create a mock filter to return
         var mockFilter = new ProductFilter()
         {
-            Page = 3,
+            NumberOfPages = 3,
             PageSize = 10,
             OrderBy = "Category",
             Ascending = false,
@@ -599,7 +599,7 @@ public class ProductsApiTest
         // Create a mock filter to return
         var mockFilter = new ProductFilter()
         {
-            Page = 3,
+            NumberOfPages = 3,
             PageSize = 10,
             OrderBy = "Category",
             Ascending = false,

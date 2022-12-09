@@ -110,7 +110,7 @@ public class ProductsApi : IProductsApi
         try
         {
             // make the call to the API to retrieve all the products
-            var response = HttpClient.GetAsync($"{BaseUri}{ProductUri}?page={productFilter.Page}&pageSize={productFilter.PageSize}&orderBy={productFilter.OrderBy}&ascending={productFilter.Ascending}&filter={productFilter.Filter}");
+            var response = HttpClient.GetAsync($"{BaseUri}{ProductUri}?page={productFilter.NumberOfPages}&pageSize={productFilter.PageSize}&orderBy={productFilter.OrderBy}&ascending={productFilter.Ascending}&filter={productFilter.Filter}");
             // check if response is successful
             if (!response.Result.IsSuccessStatusCode) return null;
             // get the response content

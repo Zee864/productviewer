@@ -1,14 +1,16 @@
 ﻿using System.Text.Json.Serialization;
 
 namespace ProductViewer.Models;
-
+/// <summary>
+/// Represents the filers that can be applied to the products
+/// </summary>
 public class ProductFilter
 {
     /// <summary>
     /// Gets or sets the amount of pages that must be returned.
     /// </summary>
     [JsonPropertyName("page")]
-    public int Page { get; set; }
+    public int NumberOfPages { get; set; }
 
     /// <summary>
     /// Gets or sets the amount of products that must be returned per page.
