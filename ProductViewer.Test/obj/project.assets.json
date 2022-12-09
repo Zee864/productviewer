@@ -6600,45 +6600,32 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Zeeshaan\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
-    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "/Users/zeeshaan/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Dev\\productviewer\\ProductViewer.Test\\ProductViewer.Test.csproj",
+      "projectUniqueName": "/Users/zeeshaan/Dev/productviewer/ProductViewer.Test/ProductViewer.Test.csproj",
       "projectName": "ProductViewer.Test",
-      "projectPath": "C:\\Dev\\productviewer\\ProductViewer.Test\\ProductViewer.Test.csproj",
-      "packagesPath": "C:\\Users\\Zeeshaan\\.nuget\\packages\\",
-      "outputPath": "C:\\Dev\\productviewer\\ProductViewer.Test\\obj\\",
+      "projectPath": "/Users/zeeshaan/Dev/productviewer/ProductViewer.Test/ProductViewer.Test.csproj",
+      "packagesPath": "/Users/zeeshaan/.nuget/packages/",
+      "outputPath": "/Users/zeeshaan/Dev/productviewer/ProductViewer.Test/obj/",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet",
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Zeeshaan\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "/Users/zeeshaan/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "http://kohde-NuGet.azurewebsites.net/NuGet": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Dev\\productviewer\\ProductViewer.Core\\ProductViewer.Core.csproj": {
-              "projectPath": "C:\\Dev\\productviewer\\ProductViewer.Core\\ProductViewer.Core.csproj"
+            "/Users/zeeshaan/Dev/productviewer/ProductViewer.Core/ProductViewer.Core.csproj": {
+              "projectPath": "/Users/zeeshaan/Dev/productviewer/ProductViewer.Core/ProductViewer.Core.csproj"
             }
           }
         }
@@ -6694,16 +6681,8 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.400/RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1803",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "You are running the 'restore' operation with an 'HTTP' source, 'http://kohde-NuGet.azurewebsites.net/NuGet'. Non-HTTPS access will be removed in a future version. Consider migrating to an 'HTTPS' source."
-    }
-  ]
+  }
 }
