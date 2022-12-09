@@ -1,0 +1,14 @@
+.table-container {
+    margin-right: 23.5%;
+    width: 78%;
+    float: right;
+    margin-top: 5%;
+}
+textarea {
+    border: none !important;
+    outline: none !important;
+}
+.spinner {
+    margin-left: 50%;
+    margin-top: 15%;
+}

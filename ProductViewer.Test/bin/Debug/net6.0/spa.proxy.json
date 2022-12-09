@@ -1,0 +1,8 @@
+{
+"SpaProxyServer": {
+"ServerUrl": "https://localhost:44490",
+"LaunchCommand": "npm start",
+"WorkingDirectory": "/Users/zeeshaan/Dev/productviewer/ProductViewer.Core/ClientApp/",
+"MaxTimeoutInSeconds": "120"
+}
+}
