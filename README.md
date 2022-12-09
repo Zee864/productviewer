@@ -1,3 +1,5 @@
+
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=Zee864_productviewer&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=Zee864_productviewer) &nbsp; [![Bugs](https://sonarcloud.io/api/project_badges/measure?project=Zee864_productviewer&metric=bugs)](https://sonarcloud.io/dashboard?id=Zee864_productviewer) &nbsp; [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=Zee864_productviewer&metric=coverage)](https://sonarcloud.io/dashboard?id=Zee864_productviewer) &nbsp; [![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=Zee864_productviewer&metric=ncloc)](https://sonarcloud.io/dashboard?id=Zee864_productviewer) &nbsp; [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=Zee864_productviewer&metric=alert_status)](https://sonarcloud.io/dashboard?id=Zee864_productviewer) &nbsp; [![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=Zee864_productviewer&metric=reliability_rating)](https://sonarcloud.io/dashboard?id=Zee864_productviewer)
 # Product Viewer
 
 This is a simple application that allows you to view products retrieved from an API along with their details.
@@ -24,7 +26,7 @@ git clone
 ```
 
 The project is an asp.net solution that contains two projects, ProductViewer.Core and ProductViewer.Tests. The ProductViewer.Core project is the main project that contains the front end and back end code. The ProductViewer.Tests project contains the unit tests for the ProductViewer project.
-The ProductViewer project is a .Net Core application that uses the React framework for the front end. 
+The ProductViewer project is a .Net Core application that uses the React framework for the front end.
 
 ## Dependencies
 
@@ -74,10 +76,3 @@ This will generate a coverage.xml file in the ProductViewer.Tests directory. You
 * [NPM](https://www.npmjs.com/) - Dependency Management
 * [Asp.Net Core](https://www.microsoft.com/net/download) - Framework for building web applications and services with .NET and C#
 * Rider - IDE used for development
-
-
-
-
-
-
-

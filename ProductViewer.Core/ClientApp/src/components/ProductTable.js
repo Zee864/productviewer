@@ -58,6 +58,7 @@ const ProductTable = () => {
                     : true,
         }
     ];
+    
     // Contains the data to be displayed in the table
     const [productTableData, setProductTableData] = useState({});
     // Indicates whether there is an error in the data
@@ -81,19 +82,21 @@ const ProductTable = () => {
                 console.log(`An error occured while getting the data: ${error}`);
             });
     }, []);
-
     
+    // Handle the error close event
     const handleClose = (event, reason) => {
         if (reason !== "clickaway") 
             setError(false);
     }
     
+    // Handle the delete event for the row
     const handleRowDelete = (oldData, resolve) => {
         setTimeout(async () => {
             await deleteProductData(
                 "product",
                 {deleteObject: oldData}
             ).then((res) => {
+                // If the delete was successful, remove the row from the table
                 if (res === true) {
                     const deleteIndex = productTableData.findIndex((object) => object.ID === oldData.ID);
                     if (deleteIndex > -1) {
@@ -106,6 +109,7 @@ const ProductTable = () => {
 
                 }
                 else {
+                    // If the delete was unsuccessful, display an error message
                     setError(true);
                     setAlertMessage("Error deleting product");
                     setSeverity("error");
@@ -115,6 +119,7 @@ const ProductTable = () => {
         }, 1000);
     }
     
+    // Handle the add event for the row
     const handleRowAdd = (newData, resolve) => {
         setTimeout(async () => {
             const res = await createNewProduct(
@@ -122,6 +127,7 @@ const ProductTable = () => {
                 { newObject: newData }
             );
             
+            // If the add was successful, add the row to the table
             if(res === true) {
                 setProductTableData([...productTableData, newData]);
                 setError(true);
@@ -129,6 +135,7 @@ const ProductTable = () => {
                 setSeverity("success");
             }
             else {
+                // If the add was unsuccessful, display an error message
                 setError(true);
                 setAlertMessage("Product could not be added");
                 setSeverity("error");
@@ -138,6 +145,7 @@ const ProductTable = () => {
         }, 1000);
     }
     
+    // Handle the update event for the row
     const handleRowUpdate = (newData, oldData, resolve) => {
         setTimeout(async () => {
             const res = await updateProductData(
@@ -145,6 +153,7 @@ const ProductTable = () => {
                 { oldID: oldData.ID, updateObject: newData }
             );
             
+            // If the update was successful, update the row in the table
             if (res === true) {
                 const dataUpdate = [...productTableData];
                 dataUpdate.forEach((object, index) => {
@@ -160,6 +169,7 @@ const ProductTable = () => {
                 setSeverity("success");
             }
             else {
+                // If the update was unsuccessful, display an error message
                 setError(true);
                 setAlertMessage("Product could not be updated");
                 setSeverity("error");
@@ -171,9 +181,11 @@ const ProductTable = () => {
 
     return (
         <div className="table-container">
+            {/* Display the progress indicator if the data is still being fetched */} 
             {!isLoading ? (
                 <>
                     {error && (
+                        /*Display the alert if there is an error*/
                         <Stack sx={{width: "100%"}} spacing={2}>
                             <Snackbar
                                 open={error}
@@ -192,6 +204,7 @@ const ProductTable = () => {
                             </Snackbar>
                         </Stack>
                     )}
+                    {/* Display the table */}
                     <MaterialTable
                         style={{
                             backgroundColor: "rgba(232, 232, 232, 1)",

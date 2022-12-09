@@ -8,11 +8,12 @@ import ProductTable from "./ProductTable";
 import "../styles/Product.css";
 
 const Product = () => {
-    //Used for switching between tabs.
-    //Tab 1 has a value 1 and so forth...
-    //setValue is used to change value variable when tab is clicked on
+    // Used for switching between tabs.
+    // Tab 1 has a value 1 and so forth...
+    // setValue is used to change value variable when tab is clicked on
     const [value, setValue] = useState(0);
-
+    
+    // Handle tab change
     const handleChange = (event, newValue) => {
         setValue(newValue);
     };
@@ -42,7 +43,7 @@ const TabPanel = (props) => {
     return <div role="tabpanel">{value === index && children}</div>;
 };
 
-// children contains the tab content that is displayed when the tab is clicked on
+// children contain the tab content that is displayed when the tab is clicked on
 // index and value are used to identify which tab is clicked
 TabPanel.propTypes = {
     children: PropTypes.node,
