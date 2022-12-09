@@ -1,10 +1,10 @@
 using System.Reflection;
+using Microsoft.AspNetCore.ResponseCompression;
 using ProductViewer.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-
 builder.Services.AddControllersWithViews();
 // Add http client to the container
 builder.Services.AddHttpClient();
@@ -14,6 +14,17 @@ builder.Configuration.AddJsonFile("appsettings.json", optional: false, reloadOnC
 builder.Configuration.AddJsonFile($"appsettings.{builder.Environment.EnvironmentName}.json", optional: true, reloadOnChange: true);
 // Add ProductApiService to the container
 builder.Services.AddTransient<IProductsApi, ProductsApi>();
+// Add ResponseCompression to the container
+builder.Services.AddResponseCompression(options => {
+    options.Providers.Add<BrotliCompressionProvider>();
+    options.Providers.Add<GzipCompressionProvider>();
+    options.MimeTypes = ResponseCompressionDefaults.MimeTypes.Concat(new[] { "image/svg+xml" });
+});
+// Add ResponseCache to the container
+builder.Services.AddResponseCaching(options => {
+    options.MaximumBodySize = 1024;
+    options.UseCaseSensitivePaths = true;
+});
 
 var app = builder.Build();
 
@@ -28,6 +39,9 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
+// Enable response compression
+app.UseResponseCompression();
+app.UseResponseCaching();
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseRouting();
