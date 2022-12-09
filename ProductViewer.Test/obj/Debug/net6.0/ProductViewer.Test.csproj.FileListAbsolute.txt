@@ -229,4 +229,3 @@ C:/Dev/productviewer/ProductViewerWithReact/ProductViewer.Test/obj/Debug/net6.0/
 /Users/zeeshaan/Dev/productviewer/ProductViewer.Test/obj/Debug/net6.0/ProductViewer.Test.pdb
 /Users/zeeshaan/Dev/productviewer/ProductViewer.Test/obj/Debug/net6.0/ProductViewer.Test.genruntimeconfig.cache
 /Users/zeeshaan/Dev/productviewer/ProductViewer.Test/obj/Debug/net6.0/ref/ProductViewer.Test.dll
-/Users/zeeshaan/Dev/productviewer/ProductViewer.Test/bin/Debug/net6.0/package-lock.json
