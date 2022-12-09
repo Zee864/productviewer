@@ -11,8 +11,11 @@ These instructions will get you a copy of the project up and running on your loc
 ### Prerequisites
 
 You will need to have the following installed on your machine:
+
 Node.js (https://nodejs.org/en/) - JavaScript runtime environment that executes JavaScript code outside of a browser
+
 NPM (https://www.npmjs.com/) - Package manager for JavaScript
+
 Asp.Net Core (https://www.microsoft.com/net/download) - Framework for building web applications and services with .NET and C#
 
 ### Installing
@@ -76,54 +79,3 @@ This will generate a coverage.xml file in the ProductViewer.Tests directory. You
 * [NPM](https://www.npmjs.com/) - Dependency Management
 * [Asp.Net Core](https://www.microsoft.com/net/download) - Framework for building web applications and services with .NET and C#
 * Rider - IDE used for development
-
-# How have each of the non-functional requirements been addressed?  
-
-## Maintainability, Structure & Readability
-
-- Dependency Injection has been used to inject the services into the controllers. This allows for the services to be easily mocked for testing and allows for the services to be easily swapped out for different implementations.
-- Interfaces have been used to define the services. This allows for the services to be easily mocked for testing and allows for the services to be easily swapped out for different implementations.
-- Annotations have been used to define the routes for the controllers. This allows for the routes to be easily changed and allows for the routes to be easily documented.
-- File and naming conventions have been used to make the code more readable and easier to navigate.
-- Code has been abstracted into separate methods to make the code more readable and easier to navigate.
-- JsDoc and XML comments have been used to document the code.
-- The code has been formatted using the default Rider formatting settings.
-- The code has been linted using the default Rider linting settings.
-
-## Reliability & Error Handling
-
-- The application has been tested using unit tests. The unit tests have been written using the NUnit framework and the Moq framework. The unit tests have been written to test the services and the controllers.
-- Logging has been implemented using the Serilog framework. The logs are written to a file in the logs directory.
-- Try/catch blocks have been used to catch any exceptions that are thrown by the services and controllers. The exceptions are logged and an error response is returned to the client.
-
-## Standards & Extensibility
-
-- IOC principles have been used to allow for the services to be easily mocked for testing and allows for the services to be easily swapped out for different implementations.
-- Explicit Dependency principle has been used to allow methods and classes to explicitly define their dependencies. This allows for identification of dependencies and allows for the dependencies to be injected via the constructor.
-- SOLID principles was used to ensure that the code is easily maintainable and extensible.
-- DRY principle has been used to allow code to be written using reusable methods.
-- Single responsibility principle has been used to logically separate the code into separate classes and methods allowing extensibility. 
-- The application has been written using the .Net Core framework. This allows the application to be run on multiple platforms.
-- The application has been written using the React framework. This allows the application to be easily extended to include more features.
-- The application has been written using the MUI framework which allows for the application to be easily styled using Google's Material Design.
-- The application has been written using the Material-Table framework allowing for the implementation of a data table with sorting, filtering and pagination.
-- MVC has been used to separate the front end and back end code. This allows the front end and back end code to be easily extended to include more features.
-
-## Efficiency & Performance
-
-- Response compression has been enabled to reduce the size of the response. This allows for the response to be sent more quickly and reduces the bandwidth required to send the response. 
-- Response catching is used to reduce the number of requests made to the API allowing for greater efficiency and performance.
-- Asynchronous programming has been used where possible to allow the application to run processes in parallel leading to greater efficiency and performance.
-- Inline methods have been used to remove the need for the compiler to create a delegate for the method. This allows better performance as there is no overhead in terms of memory allocation or preserving method call information in the memory. 
-- HttpClient has been reused by passing it into the services via dependency injection. This allows for the HttpClient to be reused and reduces the overhead of creating a new HttpClient for each request.
-
-## Testability & Automated Testing
-
-- Unit tests have been created with a 100% code coverage.
-- All of the services have been mocked using the Moq framework. This allows for the services to be easily tested without having to make any external API calls.
-- Tests have been automated using the NUnit framework. This allows for the tests to be run automatically when the code is built.
-- The tests have been written to test the services and the controllers.
-- The tests have been written to test the happy path and the unhappy path as well as to test the error handling and logging.
-- Interface have been used to mock the services allowing for the services to be easily swapped out for different implementations.
-- Dependency Injection has been used to inject the services into the controllers. This allows for the services to be easily mocked for testing and allows for the services to be easily swapped out for different implementations.
-- All dependencies have been passed into the classes via the constructor. This allows for the dependencies to be easily mocked for testing.
